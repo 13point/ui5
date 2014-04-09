@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+    <persistence-unit name="core">
+        <class>com.augmentum.ec.core.entity.Barcode</class>
+        <class>com.augmentum.ec.core.entity.BarcodeBatch</class>
+        <class>com.augmentum.ec.core.entity.Batch</class>
+        <class>com.augmentum.ec.core.entity.Brand</class>
+        <class>com.augmentum.ec.core.entity.CardTransaction</class>
+        <class>com.augmentum.ec.core.entity.Cart</class>
+        <class>com.augmentum.ec.core.entity.CartProduct</class>
+        <class>com.augmentum.ec.core.entity.CartProductId</class>
+        <class>com.augmentum.ec.core.entity.Category</class>
+        <class>com.augmentum.ec.core.entity.Location</class>
+        <class>com.augmentum.ec.core.entity.Merchant</class>
+        <class>com.augmentum.ec.core.entity.Message</class>
+        <class>com.augmentum.ec.core.entity.MessageType</class>
+        <class>com.augmentum.ec.core.entity.Order</class>
+        <class>com.augmentum.ec.core.entity.OrderPayment</class>
+        <class>com.augmentum.ec.core.entity.OrderProduct</class>
+        <class>com.augmentum.ec.core.entity.OrderProductId</class>
+        <class>com.augmentum.ec.core.entity.OrderStatus</class>
+        <class>com.augmentum.ec.core.entity.PaymentHistory</class>
+        <class>com.augmentum.ec.core.entity.PaymentMethod</class>
+        <class>com.augmentum.ec.core.entity.PaymentMethodSetting</class>
+        <class>com.augmentum.ec.core.entity.PaymentMethodSettingId</class>
+        <class>com.augmentum.ec.core.entity.Product</class>
+        <class>com.augmentum.ec.core.entity.ProductBrand</class>
+        <class>com.augmentum.ec.core.entity.ProductBrandId</class>
+        <class>com.augmentum.ec.core.entity.ProductLocation</class>
+        <class>com.augmentum.ec.core.entity.ProductLocationId</class>
+        <class>com.augmentum.ec.core.entity.ProductRedeemStore</class>
+        <class>com.augmentum.ec.core.entity.ProductRedeemStoreId</class>
+        <class>com.augmentum.ec.core.entity.ProductSellStore</class>
+        <class>com.augmentum.ec.core.entity.ProductSellStoreId</class>
+        <class>com.augmentum.ec.core.entity.ProductSetting</class>
+        <class>com.augmentum.ec.core.entity.ProductSettingGroup</class>
+        <class>com.augmentum.ec.core.entity.ProductSettingId</class>
+        <class>com.augmentum.ec.core.entity.ProductType</class>
+        <class>com.augmentum.ec.core.entity.Store</class>
+        <class>com.augmentum.ec.core.entity.User</class>
+        <class>com.augmentum.ec.core.entity.UserAccountActivity</class>
+        <class>com.augmentum.ec.core.entity.UserProduct</class>
+        <class>com.augmentum.ec.core.entity.UserProductId</class>
+        <class>com.augmentum.ec.core.entity.UserSetting</class>
+        <class>com.augmentum.ec.core.entity.UserSettingId</class>
+        <class>com.augmentum.ec.core.entity.UserType</class>
+        <class>com.augmentum.ec.core.entity.ProductStockStore</class>
+        <class>com.augmentum.ec.core.entity.ProductLink</class>
+
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+            <property name="hibernate.connection.url"
+                value="jdbc:mysql://localhost:3306/ec_core?useUnicode=true&amp;characterEncoding=utf-8&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true" />
+            <property name="hibernate.connection.username" value="root" />
+            <property name="hibernate.connection.password" value="" />
+            <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false" />
+            <property name="hibernate.connection.provider_class" value="org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider" />
+            <property name="hibernate.c3p0.min_size" value="5" />
+            <property name="hibernate.c3p0.max_size" value="50" />
+            <property name="hibernate.c3p0.acquire_increment" value="5" />
+            <property name="hibernate.c3p0.idle_test_period" value="3000" />
+            <property name="hibernate.c3p0.max_statements" value="0" />
+            <property name="hibernate.c3p0.3600" value="3600" />
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="core_read" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+            <property name="hibernate.connection.url"
+                value="jdbc:mysql://localhost:3306/ec_core?useUnicode=true&amp;characterEncoding=utf-8&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true" />
+            <property name="hibernate.connection.username" value="root" />
+            <property name="hibernate.connection.password" value="" />
+            <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false" />
+            <property name="hibernate.connection.provider_class" value="org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider" />
+            <property name="hibernate.c3p0.min_size" value="5" />
+            <property name="hibernate.c3p0.max_size" value="50" />
+            <property name="hibernate.c3p0.acquire_increment" value="5" />
+            <property name="hibernate.c3p0.idle_test_period" value="3000" />
+            <property name="hibernate.c3p0.max_statements" value="0" />
+            <property name="hibernate.c3p0.3600" value="3600" />
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="log" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <properties>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+            <property name="hibernate.connection.url"
+                value="jdbc:mysql://localhost:3306/ec_log?useUnicode=true&amp;characterEncoding=utf-8&amp;zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true" />
+            <property name="hibernate.connection.username" value="root" />
+            <property name="hibernate.connection.password" value="" />
+            <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false" />
+            <property name="hibernate.connection.provider_class" value="org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider" />
+            <property name="hibernate.c3p0.min_size" value="5" />
+            <property name="hibernate.c3p0.max_size" value="50" />
+            <property name="hibernate.c3p0.acquire_increment" value="5" />
+            <property name="hibernate.c3p0.idle_test_period" value="3000" />
+            <property name="hibernate.c3p0.max_statements" value="0" />
+            <property name="hibernate.c3p0.3600" value="3600" />
+        </properties>
+    </persistence-unit>
+</persistence>
